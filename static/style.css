@@ -1,0 +1,135 @@
+/* General Body Styling */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: url('/static/images/hooligan.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent dark background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%; /* Ensure container doesn't exceed viewport width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Heading Styling */
+h1 {
+    color: #e0f7fa; /* Light cyan for better contrast */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    color: #e0f7fa;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Select Field Styling */
+select {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    font-size: 1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text for better readability */
+}
+
+/* Input Field Styling */
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    font-size: 1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text for better readability */
+}
+
+/* Button Styling */
+button {
+    background-color: #000000; /* Dark teal for buttons */
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #00332d; /* Slightly darker teal on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    select,
+    input[type="number"],
+    input[type="text"] {
+        width: 100%; /* Full width for form fields */
+        box-sizing: border-box; /* Ensure padding and border are included in width */
+    }
+    
+    button {
+        width: 100%; /* Full width for buttons */
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    select,
+    input[type="number"],
+    input[type="text"] {
+        width: 100%; /* Full width for form fields */
+        padding: 12px;
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

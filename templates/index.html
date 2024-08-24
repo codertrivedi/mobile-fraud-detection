@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Payment Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection</h1>
+        <form action="/" method="post">
+            <label for="type">Transaction Type</label>
+            <select id="type" name="type" required>
+                <option value="" disabled selected>Select Transaction Type</option>
+                <option value="CASH_IN">CASH_IN</option>
+                <option value="CASH_OUT">CASH_OUT</option>
+                <option value="TRANSFER">TRANSFER</option>
+                <option value="DEBIT">DEBIT</option>
+                <option value="PAYMENT">PAYMENT</option>
+            </select>
+            <input type="number" name="amount" placeholder="Transaction Amount" step="0.01" required>
+            <input type="text" name="nameDest" placeholder="Destination Account - ex. C1007251739" required>
+            <input type="number" name="oldbalanceOrg" placeholder="Old Balance Orig" step="0.01" required>
+            <input type="number" name="newbalanceOrig" placeholder="New Balance Orig" step="0.01" required>
+            <input type="number" name="oldbalanceDest" placeholder="Old Balance Dest" step="0.01" required>
+            <input type="number" name="newbalanceDest" placeholder="New Balance Dest" step="0.01" required>
+            <button type="submit">Check for Fraud</button>
+        </form>
+        {% if prediction_result %}
+        <p><strong>Prediction: </strong> {{ prediction_result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
