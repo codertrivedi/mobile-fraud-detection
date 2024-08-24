@@ -1,0 +1,8 @@
+Flask==3.0.3
+tensorflow==2.17.0
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+matplotlib==3.9.1
+seaborn==0.12.2
+gunicorn==21.1.0
